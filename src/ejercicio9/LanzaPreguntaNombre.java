@@ -9,11 +9,30 @@ public class LanzaPreguntaNombre {
 
         try{
             Process pro = run.exec(comando);
+            FileReader fr = new FileReader("src\\ejercicio9\\entradaPreguntaNombre.txt");
+            BufferedReader br = new BufferedReader(fr);
+
             OutputStream os = pro.getOutputStream();
-            OutputStream osw = new OutputStream(os);
+            OutputStreamWriter osr = new OutputStreamWriter(os);
+            BufferedWriter bw = new BufferedWriter(osr);
+            String line = br.readLine();
+            while(line!=null) {
+                bw.write(line);
+                bw.newLine();
+                line = br.readLine();
+            }
+            bw.close();
+            pro.waitFor();
+
             InputStream is = pro.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br2 = new BufferedReader(isr);
 
+            String linea = br2.readLine();
+            while(linea!=null) {
+                System.out.println(linea);
+                linea = br2.readLine();
+            }
 
         }catch(Exception e){
 
