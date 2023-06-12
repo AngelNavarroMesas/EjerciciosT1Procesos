@@ -12,7 +12,7 @@ public class LanzaProcesoLento {
             InputStream is = pro.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
-            BufferedWriter bw = new BufferedWriter(new FileWriter("salidaLanzaProcesoLento2.txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\angel\\IdeaProjects\\EjerciciosT1Procesos\\src\\ejercicio8\\salidaLanzaProcesoLento2.txt"));
 
             String line = br.readLine();
             while(line!=null) {

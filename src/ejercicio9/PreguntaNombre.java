@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class PreguntaNombre {
     public static void main(String[] args) {
-        String nombre;
         Scanner sc = new Scanner(System.in);
+        String nombre="";
 
 		System.out.println("Introduzce tu nombre: ");
         nombre = sc.nextLine();

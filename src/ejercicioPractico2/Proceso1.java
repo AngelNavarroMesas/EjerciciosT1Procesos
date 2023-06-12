@@ -1,14 +1,10 @@
-package ejercicio10;
+package ejercicioPractico2;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-public class LanzaProcesos {
+public class Proceso1 {
     public static void main(String[] args) {
-        String[] comando1 = {"cmd", "/C", "md", "C:\\pruebas\\carpeta1"};
-        String[] comando2 = {"cmd", "/C", "type", "null", ">", "C:\\pruebas\\carpeta1\\fichero1.txt"};
-        String[] comando3 = {"Notepad.exe", "C:\\pruebas\\carpeta1\\fichero1.txt"};
+        String[] comando1 = {"cmd", "/C", "md", "C:\\ejercicio2 "};
+        String[] comando2 = {"cmd", "/C", "type", "null", ">", "C:\\ejercicio2\\numLineas.txt"};
+        String[] comando3 = {"Notepad.exe", "C:\\ejercicio2\\numLineas.txt"};
         ProcessBuilder pb1 = new ProcessBuilder(comando1);
         pb1.inheritIO();
         ProcessBuilder pb2 = new ProcessBuilder(comando2);
