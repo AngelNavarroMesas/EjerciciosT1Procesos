@@ -23,7 +23,7 @@ public class LanzaProcesos {
         pb2.redirectError(ProcessBuilder.Redirect.INHERIT);
         pb3.redirectError(ProcessBuilder.Redirect.INHERIT);
         try{
-            ProcessBuilder.startPipeline(pbl);
+            //ProcessBuilder.startPipeline(pbl);
         }catch (Exception e){
 
         }
